@@ -1,0 +1,47 @@
+.d{
+    display: flex;
+   flex-direction: row;
+   align-items:stretch;
+    
+   justify-content:space-between;
+   
+}
+.op{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: flex-end;
+   
+}
+
+.chat-1{
+    display: flex;
+        flex-direction: column;
+        height: 80vh;
+        overflow-y: scroll;
+    
+        -webkit-overflow-scrolling: touch;
+}
+.chat{
+    display: flex;
+        flex-direction: column;
+        height:70vh;
+        overflow-y: scroll;
+       
+        -webkit-overflow-scrolling: touch;
+    
+         
+    }
+.ankush{
+    border: 1px solid gray;
+        width: 100%;
+        padding: 12px;
+        margin: 0 16px 0 0;
+        flex-grow: 1;
+}
+.messages {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    scrollbar-width:auto;
+}
