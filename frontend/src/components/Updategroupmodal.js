@@ -209,7 +209,7 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchagain, setfetchagain }) => {
 
   return (
     <>
-      <IconButton display={{ base: "flex" }} icon={<ViewIcon />} onClick={onOpen} />
+      <IconButton d={{ base: "flex", md: "none" }} background={"white"} icon={<ViewIcon />} onClick={onOpen} />
 
       <Modal onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay />

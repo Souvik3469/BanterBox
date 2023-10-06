@@ -22,7 +22,7 @@ console.log("User:",user);
       {children ? (
         <span onClick={onOpen} >{children}</span>
       ) : (
-        <IconButton d={{ base: "flex" }} background={"blue.100"} icon={<ViewIcon />} onClick={onOpen} />
+        <IconButton d={{ base: "flex" }} background={"white"} icon={<ViewIcon />} onClick={onOpen} />
       )}
       <Modal size="lg" onClose={onClose} isOpen={isOpen} isCentered>
         <ModalOverlay  />

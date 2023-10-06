@@ -27,7 +27,57 @@ function Signup() {
   const handleClick = () => {
     setshow(!show);
   };
-  const postDetails = (pics) => {};
+const postDetails = (pics) => {
+    setPicLoading(true);
+
+    if (pics === undefined) {
+      toast({
+        title: "Please Select an Image!",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      return;
+    }
+
+    if (pics.type !== "image/jpeg" && pics.type !== "image/png") {
+      toast({
+        title: "Please Select a JPEG or PNG Image!",
+        status: "warning",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom",
+      });
+      setPicLoading(false);
+      return;
+    }
+
+    if (pics.type === "image/jpeg" || pics.type === "image/png") {
+
+      const data = new FormData()
+      data.append("file", pics)
+      data.append("upload_preset", "Chatapp")
+      data.append("cloud_name", "dtfqdqpm3")
+      axios.post("https://api.cloudinary.com/v1_1/dtfqdqpm3/image/upload", data)
+        .then((response) => {
+          console.log("Cloudinary response:", response);
+          setPic(response.data.url.toString());
+          setPicLoading(false);
+          toast({
+            title: "Image uploaded successfully!",
+            status: "success",
+            duration: 5000,
+            isClosable: true,
+            position: "bottom",
+          });
+        })
+        .catch((error) => {
+          console.log("Cloudinary error:", error);
+          setPicLoading(false);
+        });
+    }
+  }
   const submitHandler = async () => {
     setloading(true);
     if (!name || !email || !password || !confirmpassword) {
