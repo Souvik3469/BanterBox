@@ -16,7 +16,7 @@ import {
 import { ChatState } from "../context/Chatprovider";
 const ProfileModal = ({ user, children }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+console.log("User:",user);
   return (
     <>
       {children ? (
@@ -30,19 +30,19 @@ const ProfileModal = ({ user, children }) => {
           <ModalHeader
             fontSize="40px"
             fontFamily="Work sans"
-            d="flex"
+            display="flex"
             justifyContent="center"
-            background={"blue.300"}
+           bgGradient="linear(to-t, blue.200, green.200)"
           >
             {user.name}
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody
-            d="flex"
+            display="flex"
             flexDir="column"
             alignItems="center"
             justifyContent="space-between"
-            background={"green.200"}
+            background={"white"}
           >
             <Image
               borderRadius="full"
@@ -59,9 +59,9 @@ const ProfileModal = ({ user, children }) => {
           </ModalBody>
           <ModalFooter fontSize="40px"
             fontFamily="Work sans"
-            d="flex"
+            display="flex"
             justifyContent="center"
-            background={"blue.300"} >
+              bgGradient="linear(to-t, blue.200, green.200)">
             <Button onClick={onClose}>Close</Button>
           </ModalFooter>
         </ModalContent>

@@ -7,10 +7,10 @@ function Home() {
   return (
     <Container maxW="xl" centerContent>
       <Box
-        d="flex"
+        display="flex"
         justifyContent="center"
         p={3}
-        bg="green.200"
+        bgGradient="linear(to-t, blue.200, green.200)"
         w="100%"
         m="40px 0 15px 0"
         borderRadius="lg"
@@ -21,7 +21,7 @@ function Home() {
           <b>Chatify</b>
         </Center>
       </Box>
-      <Box bg="blue.100" w="100%" p={4} borderRadius="lg" borderWidth="1px" >
+      <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px" >
         <Tabs>
           <TabList>
             <Tab width="50%">Login</Tab>

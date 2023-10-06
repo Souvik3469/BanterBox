@@ -19,7 +19,7 @@ import axios from "axios";
 import Scrollablechat from "./Scrollablechat";
 import io from "socket.io-client";
 import Lottie from "react-lottie";
-const ENDPOINT = "http://localhost:5000"; // "https://talk-a-tive.herokuapp.com"; -> After deployment
+const ENDPOINT = "http://localhost:5000"; // "https://chatify.herokuapp.com"; -> After deployment
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchagain, setfetchagain }) => {
@@ -156,18 +156,20 @@ const SingleChat = ({ fetchagain, setfetchagain }) => {
         <>
           <Text
             fontSize={{ base: "28px", md: "30px" }}
-            bg="green.300"
-            pb={3}
+              bgGradient="linear(to-t, blue.200, green.200)"
+            py={3}
             px={2}
             w="100%"
+            borderRadius="lg"
             fontFamily="Work sans"
-            d="flex"
+            display="flex"
             justifyContent={{ base: "space-between" }}
             alignItems="center"
           >
             <IconButton
+              
               d={{ base: "flex", md: "none" }}
-              background={"blue.100"}
+              background={"white"}
               icon={<ArrowBackIcon />}
               onClick={() => setSelectedChat("")}
             />
@@ -191,7 +193,7 @@ const SingleChat = ({ fetchagain, setfetchagain }) => {
               ))}
           </Text>
           <div
-            d="flex"
+            display="flex"
             flexDir="column"
             justifyContent="flex-end"
             p={3}
@@ -229,7 +231,7 @@ const SingleChat = ({ fetchagain, setfetchagain }) => {
               )}
                 <Input
                 variant="filled"
-                bg="purple.200"
+              
                 color="white"
                 placeholder="Enter a message.."
                 value={newmessage}
@@ -240,8 +242,8 @@ const SingleChat = ({ fetchagain, setfetchagain }) => {
           </div>
         </>
       ) : (
-        <Box d="flex" alignItems="center" justifyContent="center"
-        bg="green.200"
+        <Box display="flex" alignItems="center" justifyContent="center"
+      bgGradient="linear(to-t, blue.200, green.200)"
         h="100%">
           <Text fontSize="3xl"  pb={3} fontFamily="Work sans">
             Click on a user to start chatting

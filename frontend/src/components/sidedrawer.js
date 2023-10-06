@@ -124,17 +124,19 @@ function SideDrawer() {
   return (
     <>
       <Center
+      display="flex"
         justifyContent="space-between"
         alignItems="center"
         bg="green.200"
         w="100%"
         p="5px 10px 5px 10px"
         borderWidth="2px"
+        bgGradient="linear(to-t, blue.200, green.200)"
       >
         <Tooltip label="Search Users to chat" hasArrow placement="bottom-end">
           <Button variant="ghost" onClick={onOpen}>
             <i className="fas fa-search"></i>
-            <Text d={{ base: "none", md: "flex" }} px={4}>
+            <Text display={{ base: "none", md: "flex" }} px={4}>
              <b>Search User</b> 
             </Text>
           </Button>
@@ -144,7 +146,7 @@ function SideDrawer() {
         </Text>
         <div >
           <Menu>
-            <MenuButton p={1}>
+            <MenuButton p={2}>
               <NotificationBadge
                 count={notification.length}
                 effect={Effect.SCALE}
@@ -169,7 +171,7 @@ function SideDrawer() {
             </MenuList>
           </Menu>
           <Menu>
-            <MenuButton as={Button} bg="blue.200" rightIcon={<ChevronDownIcon />}>
+            <MenuButton as={Button} bg="white" rightIcon={<ChevronDownIcon />}>
               <Avatar
                 size="sm"
                 cursor="pointer"
@@ -191,9 +193,9 @@ function SideDrawer() {
       <Drawer placement="left" onClose={onClose} isOpen={isOpen} >
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth="0px" bg="green.300">Search Users</DrawerHeader>
-          <DrawerBody bg="blue.400">
-            <Box d="flex" pb={0} bg="blue.200">
+          <DrawerHeader borderBottomWidth="0px" bg="green.400">Search Users</DrawerHeader>
+          <DrawerBody bgGradient="linear(to-t, blue.200, green.200)">
+            <Box display="flex" pb={2} bg="green.200">
               <Input
                 placeholder="Search by name or email"
                 mr={2}
@@ -216,7 +218,7 @@ function SideDrawer() {
                 />
               ))
             )}
-            {loadingChat && <Spinner ml="auto " d="flex" />}
+            {loadingChat && <Spinner ml="auto " display="flex" />}
           </DrawerBody>
         </DrawerContent>
       </Drawer>
