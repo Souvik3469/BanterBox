@@ -100,9 +100,9 @@ const MyChats = ({ fetchagain }) => {
                 bg={selectedChat === chat ? "blue.400" : "white"}
                 color={selectedChat === chat ? "white" : "black"}
                 px={3}
-                py={2}
-                borderRadius="lg"
-                borderWidth="1px"
+                py={4}
+                borderRadius="xl"
+                borderWidth="4px"
                 borderColor="green.600"
                 key={chat._id}
               >
