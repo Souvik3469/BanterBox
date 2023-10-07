@@ -110,20 +110,8 @@ function Login() {
       >
         Login
       </Button>
-      <Button
-        variant="solid"
-        colorScheme="red"
-        width="100%"
-        onClick={() => {
-          setEmail("guest@example.com");
-          setPassword("123456");
-        }}
-      >
-        Get Guest User Credentials
-      </Button>
-      {/* <Button variant="solid" colorScheme="yellow" width="100%" onClick={op}>
-        If logged in before click here
-      </Button> */}
+     
+      
     </VStack>
   );
 }
