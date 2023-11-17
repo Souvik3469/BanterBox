@@ -18,7 +18,7 @@ function Home() {
         borderColor="blue.400"
       >
         <Center fontSize="4xl" fontFamily="Work sans" color="black">
-          <b>Chatify</b>
+          <b>BanterBox</b>
         </Center>
       </Box>
       <Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px" >
