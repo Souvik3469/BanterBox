@@ -1,11 +1,11 @@
 {
-  "name": "chat-app",
+  "name": "banterbox-backend",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "server": "nodemon server.js"
+    "dev": "nodemon server.js"
   },
   "keywords": [
     "mern",
