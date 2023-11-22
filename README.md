@@ -7,7 +7,7 @@ BanterBox is an advanced chat application designed to offer users a seamless com
 
 - [@Souvik3469](https://github.com/Souvik3469)(Souvik Sen)
 
-<!--
+<!--1
 ## Prototype Demo 
 https://tender-vault-frontend.vercel.app
 -->
